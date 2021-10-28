@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+ion-icon {
+  transition: .3s;
+  font-size : 50px;
+  color: white;
+}
+
+#app {
+  background-color: #0e0e0e;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card {
+ background-color: #202020;
+ border: 1px solid #93c5fd;
+ border-radius: 15px;
+ padding: 20px;
+ cursor: pointer;
+}
+
+h1 {
+  color: #60A5FA;
+}
+
+p {
+  color: white;
+}

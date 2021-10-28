@@ -3,12 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="icon" href="/assets/img/favicon.png" />
     <title>Tous les liens de Martial Escudero</title>
     <meta name="robots" content="noindex" />
   </head>
   <body>
-    
+    <div id="app" class="flex h-screen">
+      <div class="m-auto text-center">
+        <div class="grid gap-10 grid-cols-5">
+          <div class="card transform transition duration-300 hover:scale-110">
+            <a href="https://www.martialescudero.com/#/" target="_blank">
+              <ion-icon name="link-outline"></ion-icon>
+              <h1 class="text-2xl">Site Web</h1>
+              <p class="text-sm mt-5">Venez découvrir mon portfolio.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -17,8 +30,18 @@
     var app = new Vue({
       el: '#app',
       data: {
+        social: null,
+      },
+      methods: {
+        async created() {
+          const response = await fetch("");
+          const data = await response.json();
+          this.social = data;
+          console.log(this.social)
+        }
       },
       mounted() {
+        this.created();
       }
     })
   </script>
