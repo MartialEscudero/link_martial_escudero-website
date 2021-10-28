@@ -11,13 +11,15 @@
   <body>
     <div id="app" class="flex lg:h-screen">
       <div class="m-auto text-center">
-        <img class="m-auto w-52 lg:mb-28 sm:mb-32 lg:my-0 sm:mt-20" src="/assets/img/icon.png">
+        <img class="m-auto w-52 lg:mb-28 sm:mb-32 lg:mt-0 sm:mt-20" src="/assets/img/icon.png">
         <div class="grid lg:gap-10 sm:gap-10 lg:grid-cols-5">
-          <div class="card transform transition duration-300 hover:scale-110 lg:max-w-xs sm:max-w-xl lg:mb-0 sm:mb-20" v-for="social in socials" :style=social.borderColor>
+          <div v-for="social in socials">
             <a :href=social.link target="_blank">
-              <ion-icon :name=social.icon></ion-icon>
-              <h1 class="lg:text-2xl sm:text-5xl">{{social.title}}</h1>
-              <p class="lg:text-sm sm:text-3xl lg:mt-5 sm:mt-10">{{social.description}}</p>
+              <div class="card transform transition duration-300 hover:scale-110 lg:max-w-xs lg:h-48 sm:max-w-xl lg:mb-0 sm:mb-20" :style=social.borderColor>
+                <ion-icon :name=social.icon></ion-icon>
+                <h1 class="lg:text-2xl sm:text-5xl">{{social.title}}</h1>
+                <p class="lg:text-sm sm:text-3xl lg:mt-5 sm:mt-10">{{social.description}}</p>
+              </div>
             </a>
           </div>
         </div>
