@@ -13,16 +13,22 @@ ion-icon {
 
 .card {
  background-color: #202020;
- border: 1px solid #93c5fd;
+ border: 1px solid white;
  border-radius: 15px;
  padding: 20px;
  cursor: pointer;
 }
 
 h1 {
-  color: #60A5FA;
+  color: white;
 }
 
 p {
   color: white;
+}
+
+@media all and (orientation: portrait) {
+  ion-icon {
+    font-size : 90px;
+  }
 }
