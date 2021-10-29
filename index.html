@@ -2,6 +2,8 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="/assets/css/style.css" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="icon" href="/assets/img/favicon.png" />
@@ -11,14 +13,16 @@
   <body>
     <div id="app" class="flex lg:h-screen">
       <div class="m-auto text-center">
-        <img class="m-auto w-52 lg:mb-28 sm:mb-32 lg:mt-0 sm:mt-20" src="/assets/img/icon.png">
-        <div class="grid lg:gap-10 sm:gap-10 lg:grid-cols-5">
+        <a href="https://www.martialescudero.com" target="_blank">
+          <img data-aos="fade" class="m-auto w-28 sm:w-52 lg:mb-28 lg:mt-0 mt-5 mb-10 sm:mt-0 sm:mb-0" src="/assets/img/icon.png">
+        </a>
+        <div data-aos="fade" class="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-10">
           <div v-for="social in socials">
             <a :href=social.link target="_blank">
-              <div class="card transform transition duration-300 hover:scale-110 lg:max-w-xs lg:h-48 sm:max-w-xl lg:mb-0 sm:mb-20" :style=social.borderColor>
+              <div class="card transform transition duration-300 hover:scale-90 max-w-xs h-48 lg:mb-0 sm:mb-20" :style=social.borderColor>
                 <ion-icon :name=social.icon></ion-icon>
-                <h1 class="lg:text-2xl sm:text-5xl">{{social.title}}</h1>
-                <p class="lg:text-sm sm:text-3xl lg:mt-5 sm:mt-10">{{social.description}}</p>
+                <h1 class="text-2xl">{{social.title}}</h1>
+                <p class="text-sm mt-3">{{social.description}}</p>
               </div>
             </a>
           </div>
@@ -26,6 +30,11 @@
       </div>
     </div>
   </body>
+  <script src="/assets/js/tailwind.config.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

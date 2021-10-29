@@ -26,9 +26,3 @@ h1 {
 p {
   color: white;
 }
-
-@media all and (orientation: portrait) {
-  ion-icon {
-    font-size : 90px;
-  }
-}
