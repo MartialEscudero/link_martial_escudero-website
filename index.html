@@ -46,7 +46,7 @@
       },
       methods: {
         async socialCreated() {
-          const response = await fetch("https://strapi-martialescudero.herokuapp.com/links?display_eq=true");
+          const response = await fetch("https://strapi.martialescudero.com/links?display_eq=true");
           const dataSocial = await response.json();
           this.tab = dataSocial;
           this.tab.forEach(element => {
