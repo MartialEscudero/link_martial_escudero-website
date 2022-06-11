@@ -5,24 +5,26 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="/assets/css/style.css" rel="stylesheet">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="icon" href="/assets/img/favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Tous les liens de Martial Escudero</title>
     <meta name="robots" content="noindex" />
   </head>
   <body>
-    <div id="app" class="flex lg:h-screen">
-      <div class="m-auto text-center">
+    <div id="app" class="flex flex-col items-center">
+      <div>
         <a href="https://www.martialescudero.com" target="_blank">
-          <img data-aos="fade" class="m-auto w-28 sm:w-52 lg:mb-28 lg:mt-0 mt-5 mb-10 sm:mt-0 sm:mb-0" src="/assets/img/icon.png">
+          <img data-aos="fade" class="mx-auto w-28 md:w-52 xl:my-28 my-10" src="/assets/img/icon.png">
         </a>
-        <div data-aos="fade" class="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-10">
+        <div data-aos="fade" class="mx-auto grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-6 mb-20">
           <div v-for="social in socialsTab">
             <a :href=social.link target="_blank">
-              <div class="card transform transition duration-300 hover:scale-90 max-w-xs h-48 lg:mb-0 sm:mb-20" :style=social.borderColor>
-                <ion-icon :name=social.icon></ion-icon>
-                <h1 class="text-2xl">{{social.title}}</h1>
-                <p class="text-sm mt-3">{{social.description}}</p>
+              <div class="card flex items-center text-white transform transition duration-300 hover:scale-90 max-w-xs h-48" :style=social.borderColor>
+                <div>
+                  <ion-icon class="mb-2 md:mb-4" :name=social.icon></ion-icon>
+                  <h1 class="text-2xl">{{social.title}}</h1>
+                  <p class="text-sm">{{social.description}}</p>
+                </div>
               </div>
             </a>
           </div>
