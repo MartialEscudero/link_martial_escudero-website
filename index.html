@@ -50,7 +50,6 @@
         async socialCreated() {
           const response = await fetch("https://strapi.martialescudero.com/api/links?filters[ShowIt][$eq]=true");
           const dataSocial = await response.json();
-          console.log(dataSocial);
           this.tab = dataSocial.data;
           this.tab.forEach(element => {
             this.socialsTab.push({
