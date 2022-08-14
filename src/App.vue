@@ -8,7 +8,7 @@ export default {
 
     methods: {
         async socialCreated() {
-            const response = await fetch("https://strapi.martialescudero.com/api/links?filters[ShowIt][$eq]=true");
+            const response = await fetch("https://strapi.martialescudero.com/api/links?filters[ShowIt][$eq]=true&sort=id");
             const dataSocial = await response.json();
 
             dataSocial.data.forEach((element) => {
