@@ -23,12 +23,6 @@ const socialMedia = [{
     "description": "Retrouvez mon profil LinkedIn.",
     "color": "#5476F1",
     "url": "https://www.linkedin.com/in/martial-escudero",
-}, {
-    "icon": "logo-behance",
-    "title": "Behance",
-    "description": "Retrouvez mes anciens projets audiovisuels.",
-    "color": "#1D4CF9",
-    "url": "https://www.behance.net/pureproduction",
 }]
 </script>
 
